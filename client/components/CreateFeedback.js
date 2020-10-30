@@ -16,14 +16,21 @@ import { SwipeListView } from 'react-native-swipe-list-view';
 
 export default function CreateFeedback({ navigation }) {
   const [questions, setQuestions] = useState([
-    { text: 'How can I be better?', id: '1', frontId: 1000, usersource: 1 },
-    { text: 'How can I do more?', id: '2', frontId: 1001, usersource: 2 },
+    {
+      text: 'Who will be the last person to remember me?',
+      id: '1',
+      frontId: 1004,
+      usersource: 2,
+    },
+    { text: 'How can I be better?', id: '2', frontId: 1000, usersource: 1 },
+    { text: 'How can I do more?', id: '3', frontId: 1001, usersource: 2 },
     {
       text: 'What is my biggest strength?',
-      id: '3',
+      id: '4',
       frontId: 1002,
       usersource: 3,
     },
+    { text: 'Why was I born?', id: '5', frontId: 1003, usersource: 1 },
   ]);
 
   const [link, setLink] = useState('');
@@ -127,8 +134,10 @@ export default function CreateFeedback({ navigation }) {
           borderBottomWidth: 1,
         }}
       />
-      <Text style={styles.enterQuestion}>Type your question below</Text>
-      <CreateInput submitHandler={submitHandler} />
+      <View style={styles.inputContainer}>
+        <Text style={styles.enterQuestion}>Type your question below</Text>
+        <CreateInput submitHandler={submitHandler} />
+      </View>
       <View
         style={{
           borderBottomColor: 'grey',
@@ -167,6 +176,10 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     paddingBottom: 10,
   },
+  // inputContainer: {
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  // },
   enterQuestion: {
     fontSize: 16,
     color: 'white',

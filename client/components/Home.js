@@ -113,7 +113,7 @@ export default function Home({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.logoStyle}>Critque</Text>
+      <Text style={styles.logoStyle}>Critique</Text>
       <View
         style={{
           borderBottomColor: 'grey',
@@ -121,6 +121,7 @@ export default function Home({ navigation }) {
         }}
       />
       <Text style={styles.outstandingStyle}>Outstanding Feedback:</Text>
+      
       <View style={styles.container}>
         <FlatList
           showsVerticalScrollIndicator={false}
@@ -132,7 +133,7 @@ export default function Home({ navigation }) {
                 return (
                   <View style={styles.questions}>
                     <TouchableOpacity
-                      onPress={() => combinedSender(item._id, item.question)}
+                      onPress={() => combinedSender(item.name, item.question)}
                     >
                       <Text style={styles.userNameStyle}>{item.name}</Text>
                       <Text style={styles.requestStyle}>"{item.question}"</Text>
@@ -151,6 +152,7 @@ export default function Home({ navigation }) {
           }}
         />
       </View>
+
       <View style={styles.linkContainer}>
         <TouchableOpacity>
           <Text style={styles.linkStyle} onPress={pressHandler}>

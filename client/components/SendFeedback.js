@@ -15,7 +15,7 @@ export default function SendFeedback({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.logoStyle}>Critque</Text>
+      <Text style={styles.logoStyle}>Critique</Text>
       <View
         style={{
           borderBottomColor: 'grey',

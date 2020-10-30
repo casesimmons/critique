@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   emoji: {
+    fontSize: 18,
     paddingBottom: 25,
   },
   logoStyle: {

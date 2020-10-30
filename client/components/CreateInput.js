@@ -38,12 +38,14 @@ const styles = StyleSheet.create({
   },
   prompt: {
     color: 'orange',
+    fontSize: 16,
     paddingTop: 25,
     padding: 10,
     paddingBottom: 20,
   },
   submit: {
     color: '#1e90ff',
+    fontSize: 16,
     padding: 10,
     paddingBottom: 20,
   },

@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
   },
   title: {
+    color: 'orange',
     fontWeight: '700',
     fontSize: 30,
   },
